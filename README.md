@@ -32,3 +32,7 @@ Click ranking controls or bars; choose a borough or all boroughs on the monthly 
 ## Deployment
 
 The GitHub Actions workflow builds and deploys this project on pushes to main. GitHub Pages source must be GitHub Actions. Asset paths use `/rat-newspaper/`. The original Ratlantis repository is separate.
+
+## Figma styling and scrap coverage
+
+All three spreads follow the edited Figma newspaper style using bundled Texturina, Oranienbaum and Labrada fonts. The December scrap fully covers the comparison when reset and parks clear of the text when clicked. Dragging, keyboard reset, charts and map controls remain available. Style overrides are in `src/data/newspaper-figma.css`; font licenses are in `src/data/fonts/`.
