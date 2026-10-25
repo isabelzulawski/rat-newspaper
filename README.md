@@ -27,7 +27,7 @@ Inspected properties are not a random sample. More recorded findings can reflect
 
 ## Controls
 
-Click ranking controls or bars; choose a borough or all boroughs on the monthly page. Queens remains the subject of the December headline and comparison. Drag the generated loose scrap to uncover the comparison; click/tap can park it, arrow keys move it and Home replaces it. Choose a map layer and move the magnifying glass to inspect source counts in that area. Turn pages using the folded corners. Full articles and sources remain readable.
+Click ranking controls or bars; choose a borough or all boroughs on the monthly page. Queens remains the subject of the December headline and comparison. Click the loose scrap or release it after a meaningful drag to crumple and discard it. Before discarding, arrow keys move it and Home resets its position. Choose a map layer and move the magnifying glass to inspect source counts in that area. Hover or focus a flat corner to reveal its curl, then click to turn. Full articles and sources remain readable.
 
 ## Deployment
 
@@ -35,4 +35,10 @@ The GitHub Actions workflow builds and deploys this project on pushes to main. G
 
 ## Figma styling and scrap coverage
 
-All three spreads follow the edited Figma newspaper style using bundled Texturina, Oranienbaum and Labrada fonts. The December scrap fully covers the comparison when reset and parks clear of the text when clicked. Dragging, keyboard reset, charts and map controls remain available. Style overrides are in `src/data/newspaper-figma.css`; font licenses are in `src/data/fonts/`.
+All three spreads follow the edited Figma newspaper style using bundled Texturina, Oranienbaum and Labrada fonts. The December scrap covers the comparison until crumpled and discarded; reopening restores it. Charts and map controls remain available. Style overrides are in `src/data/newspaper-figma.css` and `src/data/newspaper-polish.css`; font licenses are in `src/data/fonts/`.
+
+## Reviewing the newspaper code
+
+Start with [How the newspaper uses data](NEWSPAPER-DATA-GUIDE.md) for the input file, loading and calculation flow, current snapshot audit, limitations, active versus retained code, and styling order.
+
+After installing dependencies, run `node scripts/audit-newspaper-data.mjs` to verify the CSV and its gzip copy without changing them.
